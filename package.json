@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "echo 'prepare'",
+    
     "build": "webpack --config webpack.config.prod.js",
 
     "test": "npm run build"

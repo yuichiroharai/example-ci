@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf build",
     "prepare": "echo 'prepare'",
-    
     "build": "webpack --config webpack.config.prod.js",
-
     "test": "npm run build"
   },
   "repository": {
@@ -24,6 +23,7 @@
   },
   "homepage": "https://github.com/yuichiroharai/example-ci#readme",
   "devDependencies": {
+    "rimraf": "^2.6.2",
     "ts-loader": "^4.2.0",
     "typescript": "^2.8.3",
     "webpack": "^4.6.0",

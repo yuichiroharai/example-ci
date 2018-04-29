@@ -7,7 +7,7 @@
     "clean": "rimraf build",
     "prepare": "echo 'prepare'",
     "build": "webpack --config webpack.config.prod.js",
-    "test": "npm run build"
+    "test": "npm run build && npm run clean"
   },
   "repository": {
     "type": "git",

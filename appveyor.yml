@@ -1,0 +1,29 @@
+version: "{build}"
+
+platform:
+  - x86
+  - x64
+
+environment:
+    matrix:
+      - nodejs_version: ""
+      - nodejs_version: "8"
+
+branches:
+  only:
+    - master
+    - develop
+
+cache:
+  - node_modules
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+build: off
